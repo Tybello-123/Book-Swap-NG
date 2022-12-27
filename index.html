@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+    integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Book-Swap.Ng</title>
+ 
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+      <div class="container navi-1">
+        <a href="#" class="navbar-brand">
+          <h3 class="logo mb-0">BookSwap</h3>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="input-group mb-0">
+          <input type="text" class="form-control" placeholder="Enter title,book or author"
+            aria-label="Book-title-or-author" aria-describedby="button-addon2">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+              class="bi bi-search text-light"></i></button>
+        </div>
+
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto navi-2">
+            <li class="nav-item">
+              <a href="#favourites" class="nav-link d-none d-lg-block p-0"><i
+                  class="bi bi-heart text-light h3 mx-4"></i></a>
+              <a href="#favourites" class="nav-link d-lg-none d-md-block py-2 text-center">Favourites</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#profile" class="nav-link d-none d-lg-block p-0"><i
+                  class="bi bi-person-circle text-light h3"></i></a>
+              <a href="#profile" class="nav-link d-lg-none d-md-block py-2 text-center">Your Profile</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-light btn-sm p-2 big-button get-Started d-none d-lg-block mx-4 p-0" href="#GetStarted"
+                data-bs-toggle="modal" data-bs-target="#signup-modal">Get Started</a>
+              <a href="#GetStarted" class="nav-link d-lg-none d-md-block py-2 text-center" data-bs-toggle="modal"
+                data-bs-target="#signup-modal">Get Started</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+
+  <!-- section 2 Picture slides-->
+  <section class="d-none d-md-block picture-slides">
+    <div class="row text-center m-0  pic-slide">
+      <div class="col-md p-0">
+        <div class="card bg-transparent text-light border-0">
+          <div class="card-body text-center p-0 ">
+            <img src="img/pic-1.jpg" alt="donate-picture" />
+            <div class="text-center section-box">
+              <h1>Donate</h1>
+              <a class="btn btn-light big-button" href="donate.html" target="_blank">Go to this section</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md p-0">
+        <div class="card bg-transparent text-light border-0">
+          <div class="card-body text-center p-0">
+            <img src="img/pic-2.jpg" alt="swap-picture" class="w-100" />
+            <div class="text-center section-box">
+              <h1>Swap</h1>
+              <a class="btn btn-light big-button" href="swap.html" target="_blank">Go to this section</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md p-0">
+        <div class="card bg-transparent text-light border-0">
+          <div class="card-body text-center p-0">
+            <img src="img/pic-3.jpg" alt="bookclubs-picture" />
+            <div class="text-center section-box">
+              <h1>Book Clubs</h1>
+              <a class="btn btn-light big-button" href="bookclubs.html" target="_blank">Go to this
+                section</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- section picture slide for phones -->
+
+  <div id="carouselExampleInterval" class="carousel slide d-md-none pic-slide text-light" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="img/pic-1.jpg" class="d-block w-100" alt="donate-picture" />
+        <div class="text-center section-box">
+          <h1>Donate</h1>
+          <a class="btn btn-light" href="donate.html" target="_blank">Go to this section</a>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="img/pic-2.jpg" class="d-block w-100" alt="swap-picture" />
+        <div class="text-center section-box">
+          <h1>Swap</h1>
+          <a class="btn btn-light" href="swap.html" target="_blank">Go to this section</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/pic-3.jpg" class="d-block w-100" alt="bookclubs-picture" />
+        <div class="text-center section-box">
+          <h1>Book Clubs</h1>
+          <a class="btn btn-light" href="bookclubs.html">Go to this section</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- first circle section -->
+  <div class="circles circle-1">
+    <svg width="400" height="500" viewBox="0 0 621 857" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="426.5" cy="428.5" rx="426.5" ry="428.5" fill="#FFB30D" fill-opacity="0.9" />
+    </svg>
+
+  </div>
+
+
+  <!-- <div class="d-none d-sm-block circles circle-1"></div> -->
+
+  <!-- About book swap section -->
+  <section class=" text-dark p-5 my-md-5 my-2 text-center text-sm-start about">
+    <div class="container">
+      <div class="d-sm-flex align-items-center justify-content-between py-3">
+
+        <div>
+          <h1>About Book Swap</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error facere, perferendis sit aliquid quam,
+            praesentium eligendi ipsam esse sunt odio, ad voluptatibus! Ut ea accusamus minus voluptatum laborum
+            laboriosam excepturi.</p>
+          <button class="btn big-button btn-lg text-bold" href='#'>Read more</button>
+        </div>
+        <img src="img/body-2.jpg" alt="swap-a-book-picture" class="img-fluid w-50 d-sm-block d-none" />
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Popular categories section -->
+  <section id="categories-section" class="text-dark p-5 my-md-5 my-2">
+    <div class="container">
+      <div class="row text-dark ">
+        <h3 class="col mb-3 text-start d-inline">Popular Categories</h3>
+        <div class="col text-end d-inline">
+          <h3 class="d-inline">Go to all Categories</h4>
+            <i class="bi bi-arrow-right-circle-fill d-inline arrow"></i>
+        </div>
+
+      </div>
+
+      <div class="row my-2 text-center g-5 text-light text-center">
+        <div class="col-md">
+          <div class="card box-1">
+            <div class="card box-2 ">
+              <div class="card-body inner-box">
+                <i class="bi bi-book book-icon"></i>
+                <h3 class="card-title">Thriller</h3>
+
+                <a href="#" class="btn small-button btn-lg">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md">
+          <div class="card box-1">
+            <div class="card box-2 my-auto">
+              <div class="card-body inner-box">
+                <i class="bi bi-book book-icon"></i>
+                <h3 class="card-title">Comedy</h3>
+                <a href="#" class="btn small-button btn-lg">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md">
+          <div class="card box-1">
+            <div class="card box-2">
+              <div class="card-body inner-box">
+                <i class="bi bi-book book-icon"></i>
+                <h3 class="card-title">Sci-Fiction</h3>
+                <a href="#" class="btn small-button btn-lg">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="circles circle-2">
+    <svg width="450" height="550" viewBox="0 0 609 784" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="200.5" cy="392" rx="408.5" ry="392" fill="#FFB30D" />
+    </svg>
+
+  </div>
+
+
+
+  <!-- feedback section -->
+  <section class="text-dark my-5">
+    <div class="container">
+      <h3 class="text-center mb-3">Feedback from Book Swappers</h3>
+      <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex et delectus quod,
+        provident accusantium earum a rem, sunt ipsam ipsa laudantium! Cupiditate quod dolorum eligendi deleniti
+        explicabo voluptas officiis ad.</p>
+      <div class="row text-center g-5">
+        <div class="col-md">
+
+          <div class="card rounded-end fbcard p-5">
+            <div class="card-body text-start">
+              <h4 class="card-title border-bottom">Sia Mars</h4>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos quia impedit iure a
+                inventore, ipsa dolorum? Aut optio, error provident accusantium itaque possimus maxime, id ducimus,
+                alias odio cum eveniet.</p>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md">
+
+          <div class="card rounded-end fbcard p-5">
+            <div class="card-body text-start">
+              <h4 class="card-title border-bottom">Labrinth💜</h4>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos quia impedit iure a
+                inventore, ipsa dolorum? Aut optio, error provident accusantium itaque possimus maxime, id ducimus,
+                alias odio cum eveniet.</p>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md">
+
+          <div class="card rounded-end fbcard p-5">
+            <div class="card-body text-start">
+              <h4 class="card-title border-bottom">Steve Barlett</h4>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos quia impedit iure a
+                inventore, ipsa dolorum? Aut optio, error provident accusantium itaque possimus maxime, id ducimus,
+                alias odio cum eveniet.</p>
+
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+  </section>
+
+
+
+  <section id="Frequently-Asked-Questions">
+    <div class="container my-5 p-5">
+      <div class="accordion accordion-flush text-light container-fluid" id="bookclub-Location">
+        <div class="top-box" height="100px"></div>
+        <h3 class="text-dark text-center mb-4">Frequently Asked Questions</h3>
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              How do I swap my book?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+
+              <p>Sign up and swap the book for filling out a simple form and then wait for a match and decide on a right
+                pickup location</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              How do I choose a pickup location?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+
+              <p>When you find a match you can then both choose a pickup location that is comfortable for two or choose
+                to send it through our delivery system </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                How do I join a bookclub?
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <p>Put in your location and find the nearest bookclub to you in our bookclub section</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                How do I donate my books?
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <p>Send a a mail and we come pick up the books in your location!</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </section>
+
+  <!-- 
+<div class="circles circle-3">
+    <svg width="500" height="350" viewBox="0 0 586 850" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="442.882" cy="425" rx="442.882" ry="425" fill="#FFB30D"/>
+        </svg>
+        
+        
+        
+</div> -->
+
+  <section">
+    <footer>
+      <div class="container">
+        <div class="row g-5 p-5 p-md-none">
+          <div class="col-md">
+            <h4>Contact Us</h4>
+            <p><span>Email:</span>bookswapng@gmail.com</p>
+            <p><span>Phone-Number:</span>01-123-567-45</p>
+
+          </div>
+          <div class="col-md">
+            <h4>Get Monthly Updates</h3>
+              <input class="form-control newsletter" placeholder="enter your email address here" />
+              <button class="btn small-button my-2">Submit!</button>
+          </div>
+          <div class="col-md text-start text-sm-center">
+            <h4>Quick-Links</h4>
+            <p>About</p>
+            <p>Swap</p>
+            <p>Categories</p>
+            <p>Bookclubs</p>
+            <p>Donate</p>
+          </div>
+
+
+        </div>
+
+
+      </div>
+    </footer>
+    </section>
+
+    <section>
+      <div class="text-center text-light copyright p-2">
+        <i class="bi bi-c-circle d-inline"></i>
+        <p class="m-0 d-inline">Book Swap Nigeria| <span>Terms of Use</span> | Privacy Policy</p>
+        <div class="d-inline ">
+          <a href="#" class="d-inline">
+            <i class="bi bi-arrow-up-circle h1"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- sign up modal  -->
+    <div class="modal fade" id="signup-modal" aria-hidden="true" aria-labelledby="signUpModalToggle" tabindex="-1">
+      <div class="modal-dialog modal-dialog-md-centered ">
+        <div class="modal-content m-style">
+          <div class="modal-header">
+            <h4 class="modal-title justify-content-center m-header" id="sign-up">Sign-up</h4>
+            <button type="button" class="btn-close bg-light close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="col-form-label" for="name">Name:</label>
+              <input type="text" class="form-control" id="name" required />
+            </div>
+
+            <div class="mb-3">
+              <label class="col-form-label" for="name">Email:</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+
+            <div class="mb-3">
+              <label class="col-form-label" for="password">Password:</label>
+              <input type="password" class="form-control" id="password" required />
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="terms-and-conditions" value='mark' required />
+              <label class="form-check-label tc" for="terms-and-conditions">I agree to the <a href="#">terms and
+                  conditions</a></label>
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn modal-button" type="button" data-bs-toggle="modal"
+              data-bs-target="#success">Submit</button>
+          </div>
+        </div>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+    </div>
+
+
+    <!-- success modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="success" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content m-style">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalLabel">Success!!</h1>
+            <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h4>Thank you for Signing Up</h4>
+            <p>Now you have access to our 1000+ library of books!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-lg w-50 mx-auto" data-bs-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    </div>
+</body>
+
+</html>

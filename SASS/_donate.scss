@@ -1,0 +1,58 @@
+
+@import 'custom';
+@import 'buttons';
+// donate html classes
+
+
+.donate-page{
+    background-color: $accent-color;
+    font-family: $font-stack;
+   
+  
+    
+   .donate-body{
+    
+
+    h2{
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+  
+    p{
+      font-weight:200;
+      font-size: 1.2rem;
+    }
+  
+    .sponsor-pic{
+     
+      object-fit: cover;
+    }
+  
+    .comment{
+      height: 10rem;
+    }
+
+    button{
+      @include small-button-style;
+    }
+   }
+  
+   
+  
+    }
+  
+    
+  
+    @media screen and (max-width: 768px){
+      h2{
+        
+        font-size: 25px;
+      }
+    
+      p{
+        
+        font-size: 15px;
+      }
+    }
+      
+    

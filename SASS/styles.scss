@@ -1,0 +1,179 @@
+@import 'custom';
+@import 'buttons';
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  
+  }
+
+  body{
+    font-family: $font-stack;
+    background-color: $primary-color;
+    color: $font-color;
+
+
+    header{
+
+      .navi-1, .navi-2{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+  
+      }
+     
+    }
+  }
+
+
+
+ 
+
+ 
+//Picture slider
+
+
+  .pic-slide{
+    position: relative;
+    background-color: black;
+    z-index: 5;
+
+    
+
+
+    .section-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index:5;
+      }
+
+   
+  }
+
+  .pic-slide img{
+    width: 100%;
+    height: 1024px;
+    object-fit: cover;
+    opacity: 0.4;
+  
+}
+ 
+
+ 
+//Categories
+
+#categories-section{
+
+  .arrow{
+    font-size: 1.8rem;
+  }
+
+  .box-1{
+    background-color: $secondary-color;
+    height: 20rem;
+  }
+
+  .box-2{
+    background-color: $accent-color;
+    height: 20rem;
+    border-radius: 0 10em 0 0;
+
+    .inner-box{
+    
+      padding: 5em 0;
+    
+    }
+
+    .book-icon{
+      font-size: 2rem;
+    }
+
+   
+
+  }
+
+ 
+}
+
+
+
+//Feedback card
+.fbcard{
+    background-color: $accent-color;
+    color: $primary-color;
+
+    h4{
+        font-weight: $medium-weight;
+        border-bottom: 1px;
+    }
+
+    p{
+        font-weight: $light-weight;
+
+    }
+}
+
+
+//footer
+footer{
+  background-color: $accent-color;
+  color: $primary-color;
+
+  .footer-box{
+    display: flex;
+  }
+
+  .last-footer{
+    justify-self: center;
+    
+    align-self: center;
+  
+  }
+ 
+}
+
+ //bottom copyright
+
+.copyright{
+    background-color: $accent-color;
+ 
+}
+
+.circles{
+  position: absolute;
+  
+}
+
+.circle-1{
+  z-index: -1;
+  right: 0;
+  top: 30;
+
+}
+
+
+
+.circle-2{
+  z-index: -2;
+  left: 0;
+  top: 80;
+ 
+}
+
+.circle-3{
+  z-index: -1;
+  bottom: 100;
+  right: 0;
+  position: absolute;
+  
+}
+
+
+
+@import 'modals';
+@import 'donate';
+@import 'location';

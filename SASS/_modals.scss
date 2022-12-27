@@ -1,0 +1,74 @@
+@import 'custom';
+@import 'buttons';
+
+
+//Sign up or get started button modal
+
+.m-style{
+    background-color: $secondary-color;
+
+      .m-header{
+          text-align: center;
+          font-weight: $bold-weight;
+      }
+
+      label{
+        font-weight: $medium-weight;
+        font-size: 18px;
+      }
+    
+      .tc{
+        font-size: 15px;
+      }
+  
+      button{
+        background-color: $font-color;
+        color:$primary-color;
+      }
+  
+      button:hover{
+        background-color: $primary-color;
+        color:$font-color;
+      }
+
+   
+  }
+
+
+
+  // swap page 
+  .swap-form{
+
+    img{
+      height: 100vh;
+      object-fit: cover;
+      width:100%;
+    }
+
+    // background-color: $secondary-color;
+   
+
+     form{
+     font-family: $font-stack;
+     background-color: $font-color;
+     height: 100vh;
+
+     label{
+      font-size: 1.2rem;
+      font-weight: $medium-weight;
+     }
+
+     input{
+      font-weight: $medium-weight;
+     }
+
+     button{
+     @include large-button-style;
+     height: 3.5rem;
+     font-weight: $bold-weight;
+    
+    }
+  }
+  }
+
+//success 
